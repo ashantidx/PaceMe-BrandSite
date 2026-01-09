@@ -104,6 +104,7 @@ You can personalize the website by:
 This project is inspired with the help of Loveable AI and ChatGPT. 
 We used the prompt:
 "can you make a simple website for a personal energy management app for people with chronical ilnesses like long covid, the website should be a branding guide website that shows the font, the main color, what the app is and who they are and mockups of the app. I attached an image of how the app wil kinda look like, I just want you to give me a simple template"
+
 ---
 
 ## Sources
