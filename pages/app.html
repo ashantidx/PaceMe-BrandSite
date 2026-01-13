@@ -20,7 +20,7 @@
 
  <!-- Hero Section -->
 <section class="hero">
-  <!-- Background element for hero (could be an image, gradient, or video) -->
+  <!-- Background element for hero  -->
   <div class="hero-bg"></div>
 
   <!-- Main container for hero content -->
@@ -41,7 +41,7 @@
       <h1>Listen to Your Body with <span class="text-primary">PaceMe</span></h1>
 
       <!-- Short description of the app -->
-      <p>Track your energy, symptoms, and recovery. Gain insights into your patterns and learn to manage your health better.</p>
+      <p>Track your energy, symptoms, and recovery. Gain insights into your patterns and learn to manage your health and energy better.</p>
 
       <!-- Call-to-action buttons -->
       <div class="hero-buttons">
@@ -57,7 +57,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
-            View Demo
+            View Promotion Video
         </button>
 
 
@@ -66,7 +66,7 @@
       <!-- Social proof section: avatars + ratings -->
       <div class="social-proof">
 
-        <!-- Small user avatars -->
+        <!-- Small user avatars (made them invisible since when I remove them the entire hero gets f*cked and I don't want to deal with it) -->
         <div class="avatars">
           <div class="avatar">JD</div>
           <div class="avatar">MK</div>
@@ -177,99 +177,108 @@
 </section> <!-- End of Features Section -->
 
 
-  <!-- SCREENS SECTION -->
-  <section class="screens">
-    <div class="container">
+  <!-- SCREENS SECTION: Displays preview images of the app's main screens -->
+<section class="screens">
+  <div class="container">
 
-      <!-- Section header -->
-      <div class="section-header">
-        <span class="section-label">App Preview</span>
-        <h2>A Glimpse Inside the App</h2>
-        <p>Discover PaceMe’s intuitive interface.</p>
+    <!-- Section header: Title, subtitle, and brief description -->
+    <div class="section-header">
+      <span class="section-label">App Preview</span>
+      <h2>A Glimpse Inside the App</h2>
+      <p>Discover PaceMe’s intuitive interface.</p>
+    </div>
+
+    <!-- Grid of screens: Four app preview images arranged in a responsive layout -->
+    <div class="screens-grid">
+
+      <!-- Screen item: Splash / Landing screen -->
+      <div class="screen-item">
+        <div class="phone-frame mock-up">
+          <img src="/images/app/screen-splash.png" alt="Welcome">
+        </div>
+        <span class="screen-label">Landing Page</span>
       </div>
 
-      <!-- Grid of screens -->
-      <div class="screens-grid">
-
-        <div class="screen-item">
-          <div class="phone-frame mock-up">
-            <img src="/images/app/screen-splash.png" alt="Welkom">
-          </div>
-          <span class="screen-label">Landing Page</span>
+      <!-- Screen item: Home dashboard -->
+      <div class="screen-item">
+        <div class="phone-frame mock-up">
+          <img src="/images/app/screen-home-1.png" alt="Dashboard">
         </div>
+        <span class="screen-label">Dashboard</span>
+      </div>
 
-        <div class="screen-item">
-          <div class="phone-frame mock-up">
-            <img src="/images/app/screen-home-1.png" alt="Dashboard">
-          </div>
-          <span class="screen-label">Dashboard</span>
+      <!-- Screen item: Check-in overview -->
+      <div class="screen-item">
+        <div class="phone-frame mock-up">
+          <img src="/images/app/screen-home-2.png" alt="Check-in">
         </div>
+        <span class="screen-label">Check-ins</span>
+      </div>
 
-        <div class="screen-item">
-          <div class="phone-frame mock-up">
-            <img src="/images/app/screen-home-2.png" alt="Check-in">
-          </div>
-          <span class="screen-label">Check-ins</span>
+      <!-- Screen item: Trends and analytics -->
+      <div class="screen-item">
+        <div class="phone-frame mock-up">
+          <img src="/images/app/screen-trends.png" alt="Trends">
         </div>
+        <span class="screen-label">Trends</span>
+      </div>
 
-        <div class="screen-item">
-          <div class="phone-frame mock-up">
-            <img src="/images/app/screen-trends.png" alt="Trends">
-          </div>
-          <span class="screen-label">Trends</span>
-        </div>
+    </div>
+  </div>
+</section>
 
+<!-- CTA SECTION: Encourages users to download the app with a clear call-to-action -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-card">
+      <h2>Start listening to your body today</h2>
+      <p>Download PaceMe and learn how to gain more daily energy.</p>
+
+      <!-- CTA buttons: Download button and link to learn more -->
+      <div class="cta-buttons">
+        <button class="btn btn-white">Download Now</button>
+        <button class="btn btn-ghost" href="/index.html">Learn More →</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA SECTION -->
-  <section class="cta">
-    <div class="container">
-      <div class="cta-card">
-        <h2>Start listening to your body today</h2>
-        <p>Download PaceMe for free and learn how to gain more daily energy.</p>
-
-        <div class="cta-buttons">
-          <button class="btn btn-white">Download Now</button>
-          <button class="btn btn-ghost" href="/index.html">Learn More →</button>
-        </div>
-      </div>
+<!-- VIDEO PREVIEW: Autoplay looping demonstration video of the app -->
+<section class="video-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Discover PaceMe</span>
+      <h2>Your path to better recovery</h2>
     </div>
-  </section>
 
-  <!-- VIDEO PREVIEW -->
-  <section class="video-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Discover PaceMe</span>
-        <h2>Your path to better recovery</h2>
-      </div>
-
-      <div class="video-wrapper">
-        <video autoplay loop muted playsinline>
-          <source src="/images/app/app-video.mp4" type="video/mp4" />
-        </video>
-      </div>
+    <!-- Video wrapper: Contains the autoplaying app preview video -->
+    <div class="video-wrapper">
+      <video autoplay loop muted playsinline>
+        <source src="/images/app/app-video.mp4" type="video/mp4" />
+      </video>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-logo">PaceMe</div>
+<!-- FOOTER: Basic site footer with navigation links -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-logo">PaceMe</div>
 
-      <nav class="footer-nav">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </nav>
+    <!-- Footer navigation: Legal and contact links -->
+    <nav class="footer-nav">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </nav>
 
-      <p class="footer-credit">Made with ❤️ in the Netherlands</p>
-    </div>
-  </footer>
+    <!-- Optional footer credit (currently commented out) -->
+    <!-- <p class="footer-credit">Made with ❤️ in the Netherlands</p> -->
+  </div>
+</footer>
 
-  <!-- Your JS File -->
-  <script src="/js/app.js"></script>
+<!-- JS File: Main JavaScript logic for the page -->
+<script src="/js/app.js"></script>
 </body>
 </html>
+

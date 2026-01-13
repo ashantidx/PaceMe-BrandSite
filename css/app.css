@@ -1,20 +1,27 @@
 /* =========================================================
    GLOBAL SETTINGS
+   - Root color variables, general resets, base typography
 ========================================================= */
 :root {
+  /* Brand and UI color palette */
   --primary: #e8734a;
   --primary-light: #f5a882;
   --background: #fff9f5;
   --text: #2d2520;
   --muted: #8a7a70;
-   --card: #ffffff;
+  --card: #ffffff;
   --border: #f0e6df;
+
+  /* Gradients for hero background and primary button styles */
   --gradient-hero: linear-gradient(180deg, #fff5ed 0%, #ffe4d4 50%, #ffd4c0 100%);
   --gradient-primary: linear-gradient(135deg, #f5a882 0%, #e8734a 100%);
+
+  /* Shadows used across UI components */
   --shadow-soft: 0 4px 24px -4px rgba(232, 115, 74, 0.15);
   --shadow-phone: 0 25px 80px -20px rgba(232, 115, 74, 0.35);
 }
 
+/* Reset margin/padding and set consistent font & box behavior */
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +29,7 @@
   font-family: "Nunito", sans-serif;
 }
 
+/* Global body defaults */
 body {
   background: var(--background);
   color: var(--text);
@@ -29,14 +37,17 @@ body {
   line-height: 1.6;
 }
 
+/* Responsive content container constraint */
 .container {
   max-width: 1200px;
   padding: 0 24px;
   margin: auto;
 }
 
+
 /* =========================================================
    HERO SECTION
+   - Landing section with headline, buttons, and phone mockups
 ========================================================= */
 .hero {
   position: relative;
@@ -46,6 +57,7 @@ body {
   padding: 80px 0 40px;
 }
 
+/* Two-column layout for hero text + imagery */
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,6 +67,7 @@ body {
 
 .hero-text { z-index: 10; }
 
+/* Badge above title showing small highlight info */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -67,14 +80,33 @@ body {
   color: var(--muted);
 }
 
+/* Small animated pulsating dot next to badge text */
 .badge-dot {
   width: 8px;
   height: 8px;
   background: var(--primary);
   border-radius: 50%;
-  animation: pulse 2s infinite;
+  animation: pulse 1.8s ease-in-out infinite;
 }
 
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Main hero heading */
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 800;
@@ -83,8 +115,10 @@ body {
   color: #16161D;
 }
 
+/* Accent color utility class */
 .text-primary { color: var(--primary); }
 
+/* Hero subtitle paragraph */
 .hero-text > p {
   font-size: 1.25rem;
   color: var(--muted);
@@ -92,12 +126,14 @@ body {
   max-width: 500px;
 }
 
+/* CTA button layout */
 .hero-buttons {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
+/* Base button styling */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -111,6 +147,7 @@ body {
   transition: all 0.3s;
 }
 
+/* Primary gradient button */
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
@@ -119,19 +156,22 @@ body {
 
 .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
 
+/* Outline button with subtle border */
 .btn-outline {
   background: rgba(255,255,255,0.8);
   border: 1px solid var(--border);
   color: var(--foreground);
 }
 
-.btn-outline:hover { background: white; }
+.btn-outline:hover { background: white; opacity: 0.9; transform: translateY(-2px);}
 
+/* White button variation */
 .btn-white {
   background: white;
   color: var(--foreground);
 }
 
+/* Transparent ghost button */
 .btn-ghost {
   background: transparent;
   color: white;
@@ -139,6 +179,7 @@ body {
 
 .btn-ghost:hover { background: rgba(255,255,255,0.1); }
 
+/* Social proof section: hidden text for now */
 .social-proof {
   display: flex;
   align-items: center;
@@ -147,12 +188,14 @@ body {
   color: transparent;
 }
 
+/* Avatar group layout */
 .avatars {
   display: flex;
   margin-left: 12px;
   color: transparent;
 }
 
+/* Single avatar circle */
 .avatar {
   width: 40px;
   height: 40px;
@@ -166,10 +209,10 @@ body {
   margin-left: -12px;
 }
 
-.stars {  color: transparent; }
-.rating p {   color: transparent; }
+.stars { color: transparent; }
+.rating p { color: transparent; }
 
-/* Phone Mockups */
+/* Phone mockups container */
 .hero-phones {
   position: relative;
   display: flex;
@@ -177,40 +220,35 @@ body {
   margin-left: 40px;
 }
 
+/* Phone wrapper frame */
 .phone-frame {
-  background: var(--foreground);
+  background: #16161D;
   border-radius: 48px;
   padding: 8px;
   box-shadow: var(--shadow-phone);
-  background: #16161D;;
 }
 
+/* Phone image inside frame */
 .phone-frame img {
   width: 100%;
   border-radius: 40px;
   display: block;
 }
 
-/* Floating animation for phones */
+/* Floating animation for subtle motion on phones */
 @keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(0deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
-/* Main phone */
+/* Main phone mockup */
 .phone-main {
   width: 280px;
   animation: float 6s ease-in-out infinite;
 }
 
-/* Secondary phone, slightly delayed */
+/* Secondary phone with delay and overlap */
 .phone-secondary {
   width: 240px;
   position: absolute;
@@ -219,13 +257,13 @@ body {
   animation: float 6s ease-in-out infinite 1s;
 }
 
-
 .phone-frame.small { width: 200px; }
+
 
 /* =========================================================
    SECTIONS
+   - General structural styling for section titles & text
 ========================================================= */
-
 .section-header {
   text-align: center;
   max-width: 600px;
@@ -255,17 +293,23 @@ body {
 
 
 /* =========================================================
-   FEATURES
+   FEATURES SECTION
+   - Grid of feature cards with icons and descriptions
 ========================================================= */
 
-.features { padding: 80px 0; background: white; }
+.features {
+  padding: 80px 0;
+  background: white;
+}
 
+/* 3-column layout for feature cards */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
+/* Individual feature card styling */
 .feature-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -274,11 +318,13 @@ body {
   transition: all 0.3s;
 }
 
+/* Hover lift interaction */
 .feature-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
 }
 
+/* Icon container */
 .feature-icon {
   width: 48px;
   height: 48px;
@@ -291,6 +337,7 @@ body {
   margin-bottom: 16px;
 }
 
+/* Feature title */
 .feature-card h3 {
   font-size: 18px;
   font-weight: 700;
@@ -298,66 +345,60 @@ body {
   color: #16161D;
 }
 
+/* Feature description text */
 .feature-card p {
   color: var(--muted);
   font-size: 14px;
 }
 
+
 /* =========================================================
    SCREENS SECTION (APP PREVIEW)
+   - Grid showcasing app UI screens inside phone frames
 ========================================================= */
 
-/* Main container spacing */
+/* Section padding + background */
 .screens {
   padding: 80px 0;
   background: var(--gradient-hero);
 }
 
-/* Center and style the section header */
-.screens .section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-/* Grid layout for the app screens */
+/* Screen grid: 4 columns on desktop */
 .screens-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 items on desktop */
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   justify-items: center;
 }
 
-/* Each screen item container */
+/* Each screen preview item */
 .screen-item {
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-/* Hover lift effect */
+/* Hover animation */
 .screen-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
 }
 
-/* Frame wrapping around each screen image */
+/* Phone frame wrapper for preview images */
 .phone-frame.mock-up {
-  height: auto;
   border-radius: 48px;
   padding: 8px;
-  box-shadow: var(--shadow-phone);
-  background: #16161D;;
+  background: #16161D;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-/* Make sure images scale properly */
+/* Image scaling */
 .phone-frame.mock-up img {
-   width: 100%;
+  width: 100%;
   border-radius: 40px;
   display: block;
 }
 
-/* Label under each image */
+/* Label under each preview */
 .screen-label {
   margin-top: 24px;
   background: white;
@@ -370,9 +411,9 @@ body {
 }
 
 
-
 /* =========================================================
    CTA SECTION
+   - Highlight box encouraging download or more info
 ========================================================= */
 .cta {
   padding: 80px 0;
@@ -386,6 +427,7 @@ body {
   color: white;
 }
 
+/* CTA button arrangement */
 .cta-buttons {
   display: flex;
   gap: 12px;
@@ -394,20 +436,25 @@ body {
   flex-wrap: wrap;
 }
 
+/* White button variation inside CTA */
 .btn-white {
   background: white;
   color: var(--primary);
 }
 
+/* Ghost CTA button */
 .btn-ghost {
   background: transparent;
   color: white;
   border: 1px solid white;
 }
 
+
 /* =========================================================
    VIDEO SECTION
+   - Embedded autoplay video preview
 ========================================================= */
+
 .video-section {
   padding: 60px 0;
 }
@@ -424,8 +471,10 @@ body {
   display: block;
 }
 
+
 /* =========================================================
    FOOTER
+   - Simple footer with navigation links
 ========================================================= */
 .footer {
   background: var(--primary);
@@ -442,77 +491,89 @@ body {
 
 .footer-content p {
   max-width: 400px;
-  list-style: none;
 }
 
 .footer-nav a {
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
-  align-content: center;
 }
+
+
 /* =========================================================
    RESPONSIVE BREAKPOINTS
+   - Tablet & mobile layout adjustments
 ========================================================= */
 
-/* Tablet */
+/* Tablet layout adjustments */
 @media (max-width: 992px) {
+  /* Stack hero columns */
   .hero-content {
     flex-direction: column;
     text-align: center;
   }
+  
   .hero h1 {
     font-size: 2.4rem;
   }
+
   .hero-phones {
     gap: 10px;
   }
+
+  /* Reduce feature columns from 3 to 2 */
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-/* Mobile */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-  .hero-text p {
-    font-size: 1rem;
-  }
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-buttons {
-    flex-direction: column;
-  }
-  .cta-card {
-    padding: 30px;
-  }
-  .footer-content {
-    text-align: center;
-    flex-direction: column;
-  }
-}
-
-/* Tablet: 2 per row */
-@media (max-width: 992px) {
+  /* Screens grid goes from 4 → 2 */
   .screens-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
   .phone-frame.small {
     width: 150px;
   }
 }
 
-/* Mobile: 1 per row */
+/* Mobile layout adjustments */
 @media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Features collapse to 1 column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack hero buttons vertically */
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .cta-card {
+    padding: 30px;
+  }
+
+  /* Footer stack */
+  .footer-content {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  /* Screens grid becomes 1 column */
   .screens-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
+
   .phone-frame.small {
     width: 140px;
   }
-} 
+}
