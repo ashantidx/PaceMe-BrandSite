@@ -1,0 +1,282 @@
+:root {
+  --dark: #16161D;
+  --light: #FCF5F0;
+  --peach: #FEC57F;
+  --orange: #F58C5B;
+  --coral: #F57357;
+  --mint: #4FC18C;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--dark);
+  background: linear-gradient(
+    135deg,
+    var(--peach),
+    var(--coral)
+  );
+}
+
+/* Sections */
+
+.title {
+  max-width: 80%;
+  margin: 0 auto 96px;
+  padding: 200px 24px;
+  text-align: center;
+  color: var(--light);
+}
+
+.section {
+  padding: 100px 200px;
+  text-align: center;
+}
+
+.section-color {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Text */
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 3em;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: rgba(22, 22, 22, 0.6);
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+/* Logo */
+
+.white {
+  color: var(--light);
+}
+
+.logo-img img{
+  height: 200px;
+  margin-bottom: 20px;
+  filter: drop-shadow(rgba(242, 242, 242, 0.1) 5px 5px 10px);
+}
+
+
+.logo-mark.gradient {
+  background: linear-gradient(135deg, var(--peach), var(--coral));
+}
+
+.logo-mark.white {
+  background: white;
+}
+
+/* Logo cards */
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.logo-card {
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.logo-card.light {
+  background: white;
+}
+
+.logo-card.gradient {
+  background: linear-gradient(135deg, var(--peach), var(--coral));
+}
+
+.logo-card.coral {
+  background: var(--coral);
+  color: white;
+}
+
+/* Colors */
+
+.color-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.color-item {
+  font-size: 20px;
+}
+
+.color-item p{
+  font-size: 16px;
+}
+
+.color-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.color-circle.dark { background: var(--dark); }
+.color-circle.light { background: var(--light); }
+.color-circle.peach { background: var(--peach); }
+.color-circle.orange { background: var(--orange); }
+.color-circle.coral { background: var(--coral); }
+.color-circle.mint { background: var(--mint); }
+
+/* Typography */
+
+/* Typography section refinements */
+
+.typography-section {
+  color: white;
+}
+
+.section-title {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* Typography card */
+
+.type-card {
+  background: rgba(255, 245, 238, 0.9);
+  border-radius: 16px;
+  padding: 40px;
+  width: 1000px;
+  margin: 48px auto 0;
+  color: var(--dark);
+  text-align: left;
+}
+
+/* Header */
+
+.type-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #888;
+}
+
+.type-font-name {
+  font-size: 56px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FEC57F, #F57357);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 8px;
+}
+
+/* Divider */
+
+.type-divider {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  margin: 32px 0;
+}
+
+/* Rows */
+
+.type-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.type-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: baseline;
+}
+
+.type-role {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Examples */
+
+.type-example {
+  line-height: 1.4;
+}
+
+.type-example.header {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.type-example.subheader {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.type-example.text {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.type-example.description {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+/* Gradient bar */
+
+.gradient-bar {
+  height: 120px;
+  border-radius: 20px;
+  margin-top: 32px;
+  background: linear-gradient(
+    90deg,
+    var(--peach),
+    var(--orange),
+    var(--coral)
+  );
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 30px 24px;
+  font-size: 12px;
+  color: rgba(0,0,0,0.5);
+}
