@@ -1,66 +1,90 @@
 # 🎉 Branding Website for PaceMe App Industry Project Semester 7 HCD
-Text here
+PaceMe is an energy‑management app designed for people living with chronic conditions such as Long Covid, ME/CFS, or other energy‑limiting illnesses. This branding website serves both as an introduction for new users and as a visual and strategic brand identity handbook for stakeholders, designers, and developers.
 
-Text here
+The site brings together the core of the brand: its mission, visual identity, tone of voice, and a preview of the app experience.
 
 ---
 
 ## 🧠 Project Overview
 
-This website is a branding style guide made for our Industry Project of semester 7 Human Centered Design. 
+This website was developed as part of the Industry Project in Semester 7 of Human Centered Design.
+The goal is to establish a consistent, accessible, and human‑centered brand identity for PaceMe — an app that helps users monitor their energy, recognize patterns, and balance their daily activities more effectively.
+
+The branding site functions as:
+
+  -  An introduction platform for new users
+
+  -  A brand identity guide for designers, developers, and stakeholders
+
+  -  A visual showcase of the app and its features
 
 ---
 
 ## 🚀 Features
 
-- Text here
-- Text here
-- Text here
-- Text here
+- Homepage with context about PaceMe, the target audience, and the mission
 
+- Brand Identity page with color palette, logo variations, typography, and usage guidelines
+
+- App Preview page with mockups, feature overview, and promotional video
+
+- Responsive design for all devices
+
+- Interactive elements such as hover animations and dynamic components
 
 ---
 
 ## 📦 Project Structure
-Website/
 
-├── index.html ➤ Main  HTML
+├── index.html ➤ Main HTML
 
-├── styles.css ➤ Styles 
-
-├── scripts.js ➤ Main JS 
+├── brand.html ➤ Brand Identity HTML
 
 ├── images/ ➤ Folder for visuals (photo)
 
 ├── pages/ ➤ Folder for different pages except homepage (index.html)
 
-  └── typography.html/ ➤ File for typography html
+  └── app.html/ ➤ File for app preview html
 
 ├── css/ ➤ Folder for different css except main
 
-  └── typography.css/ ➤ File for typography css
+  └── index.css/ ➤ File for home css
+  
+  └── brand.css/ ➤ File for brand css
+  
+  └── app.css/ ➤ File for app css
 
 ├── js/ ➤ Folder for different JavaScript except main
 
-  └── typogrpahy.js/ ➤ File for typography css
+  └── brand.js/ ➤ File for brand page css
+
+  └── app.js/ ➤ File for app page css
 
 └── README.md ➤ This file
 
 ---
 
 ## 💡 How It Works
+The website is built using static HTML pages styled with modular CSS files.
+JavaScript is used for light interactions such as animations, toggles, and dynamic content.
 
-Text here
+The structure is intentionally simple so that:
+
+  -  stakeholders can quickly understand the brand identity
+
+  -  designers and developers can easily reuse the styles
+
+  -  the site remains easy to expand for future iterations
 ---
 
 ## 🎨 Tech Stack
 
-| Technology | Purpose                               |
-|------------|---------------------------------------|
-| HTML       | Website structure                     |
-| CSS        | Visual styling                        |
-| JavaScript | ...                                   |
-| Images     | Graphics for visual interest          |
+| Technology | Purpose                                  |
+|------------|------------------------------------------|
+| HTML       | Website structure                        |
+| CSS        | Visual styling                           |
+| JavaScript | Interactive elements and dynamic behavior|
+| Images     | Graphics for visual interest             |
 
 ---
 
@@ -71,14 +95,13 @@ Text here
 bash
 git clone https://github.com/ashantidx/paceme-brandsite.git
 
-cd website
 
 ### 📂 Open the Website
 
 Open the website with the following link in your preferred browser:
 
 Link here
-
+https://pace-me-brand-site.vercel.app/
 
 ✔ Chrome
 ✔ Firefox
@@ -108,7 +131,7 @@ We used the prompt:
 ---
 
 ## Sources
-Text here
+Our Figma: https://www.figma.com/proto/EnKP6Cd7gaOzBSz707BaGO/Testing-prototype?node-id=321-5083&t=QXTrkWnseE3d4YhU-1&show-proto-sidebar=1&starting-point-node-id=321%3A5083
 
 ## Created By
 Ashanti Diogo Xavier, Hanga Kovács and Thimo van der Vlies, 2026.
