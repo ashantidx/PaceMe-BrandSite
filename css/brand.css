@@ -345,13 +345,31 @@ h2 {
 
 
 /* Footer */
-
-footer {
-  text-align: center;
-  padding: 30px 24px;
-  font-size: 12px;
-  color: rgba(0,0,0,0.5);
+.footer {
+  background: var(--coral);
+  color: white;
+  padding: 40px 0;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.footer-content p {
+  max-width: 400px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
 
 /* Dynamic */
 

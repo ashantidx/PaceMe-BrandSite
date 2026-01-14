@@ -333,6 +333,34 @@
       position: relative;
       z-index: 2;
     }
+/* =========================================================
+   FOOTER - Simple footer with navigation links
+========================================================= */
+.footer {
+  background: var(--c3);
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.footer-content p {
+  max-width: 400px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
 
     /* =========================
        RESPONSIVE
