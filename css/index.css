@@ -1,0 +1,368 @@
+    :root{
+      /* Palette */
+      --c1:#FEC57F;
+      --c2:#F99C6B;
+      --c3:#F57357;
+      --c4:#FCF9F8;
+
+      --dark:#16161D;
+      --green:#68C18C;
+
+      /* UI */
+      --text:#ffffff;
+      --btn: var(--c3);
+
+      --edge: 18px;
+      --radius: 12px;
+      --card-bg: rgba(252,249,248,0.72);
+      --shadow: 0 10px 26px rgba(0,0,0,0.10);
+    }
+
+    /* =========================
+       BASE
+       ========================= */
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body{
+      margin: 0;
+      font-family: "Nunito", sans-serif;
+      background: var(--c4);
+    }
+
+    img{ max-width: 100%; display: block; }
+
+    /* =========================
+       LAYOUT
+       ========================= */
+    .page{ width: 100%; }
+    
+
+    .section{
+      width: 100%;
+      padding: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section--full{
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /* zachte glow overlay */
+    .section::before{
+      content:"";
+      position:absolute;
+      inset:-20%;
+      background: radial-gradient(circle at 30% 10%,
+        rgba(255,255,255,0.35) 0%,
+        rgba(255,255,255,0.12) 35%,
+        rgba(255,255,255,0.00) 70%);
+      pointer-events:none;
+      z-index: 0;
+    }
+
+    /* per section gradient */
+    .grad-1{ background: linear-gradient(90deg, var(--c1) 0%, var(--c4) 100%); }
+    .grad-2{ background: linear-gradient(120deg, var(--c2) 0%, var(--c4) 70%, rgba(254,197,127,0.25) 100%); }
+    .grad-3{ background: linear-gradient(135deg, rgba(245,115,87,0.42) 0%, var(--c2) 40%, var(--c4) 100%); }
+    .grad-4{ background: linear-gradient(135deg, rgba(245,115,87,0.55) 0%, var(--c1) 45%, var(--c4) 100%); }
+
+    .wrap{
+      width: min(900px, 92vw);
+      text-align: center;
+      display: grid;
+      place-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =========================
+       COMPONENTS
+       ========================= */
+    .actions{
+      display: inline-flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn{
+      appearance: none;
+      border: 0;
+      background: var(--btn);
+      color: var(--text);
+
+      padding: 15px 26px;
+      border-radius: 999px;
+
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1;
+
+      cursor: pointer;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.10);
+      transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none; /* geen underline */
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      filter: brightness(1.02);
+      box-shadow: 5px 5px 10px rgba(245,115,87,0.38);
+    }
+
+    .btn:active{
+      transform: translateY(0);
+      filter: brightness(0.99);
+      box-shadow: 0 8px 14px rgba(245,115,87,0.30);
+    }
+
+    .title{
+      text-align: center;
+      font-size: clamp(38px, 5vw, 56px);
+      font-weight: 900;
+      margin: 0 0 18px;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      padding: 0 var(--edge);
+    }
+
+    .card{
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .label{
+      font-size: 14px;
+      font-weight: 900;
+      color: rgba(22,22,29,0.9);
+      margin: 0 0 8px;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+    .hero__logo{
+      width: min(500px, 100vw);
+      margin: 0 auto 22px;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .hero__text{
+      font-size: 22px;
+      margin: 0 0 18px;
+      color: var(--dark);
+    }
+
+    /* =========================
+       ABOUT
+       ========================= */
+    .infobox{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 18px;
+    }
+
+    .infocard{
+      padding: 8px 30px;
+      color: var(--dark);
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.10);
+      font-weight: 800;
+    }
+
+    /* =========================
+       BRANDING
+       ========================= */
+    .branding{
+      align-content: start;
+    }
+
+    .branding__inner{
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding-top: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .branding__grid{
+      display: grid;
+      gap: 22px;
+      width: 100%;
+    }
+
+    /* left/right edge cards */
+    .edge-left .label{
+      padding-left: var(--edge);
+      text-align: left;
+    }
+
+    .edge-right .label{
+      padding-right: var(--edge);
+      text-align: right;
+    }
+
+    .edge-left .card{
+      width: min(980px, calc(100% - var(--edge)));
+      margin-right: auto;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .edge-right .card{
+      width: min(980px, calc(100% - var(--edge)));
+      margin-left: auto;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    /* logo row */
+    .brand-logos{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .brand-logos img{
+      width: min(210px, 100%);
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,0.10));
+    }
+
+    /* swatches */
+    .swatches{
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .swatch{
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+      user-select: none;
+    }
+
+    .swatch--light{ color: rgba(22,22,29,0.90); }
+    .swatch--dark{ color: #fff; }
+
+    .typo-sample{
+      margin: 0;
+      font-size: 32px;
+      font-weight: 500;
+      color: #000;
+      text-align: left;
+      padding-left: 30px;
+    }
+
+    .branding__footer{
+      display: grid;
+      place-items: center;
+      margin-top: 18px;
+    }
+
+    /* =========================
+       MOCKUP FULLSCREEN
+       ========================= */
+    .mockup-section{
+      position: relative;
+      min-height: 100vh;
+      padding: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .mockup-section img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      filter: none;
+    }
+
+    /* overlay voor leesbaarheid button */
+    .mockup-section::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at 50% 50%,
+        rgba(0,0,0,0.18) 0%,
+        rgba(0,0,0,0.00) 55%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .mockup-section .actions{
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+    @media (max-width: 780px){
+      :root{ --edge: 16px; }
+
+      .brand-logos{ grid-template-columns: 1fr; }
+
+      .edge-left .card,
+      .edge-right .card{
+        width: calc(100% - (var(--edge) * 2));
+        margin: 0 auto;
+        border-radius: var(--radius);
+      }
+
+      .edge-left .label,
+      .edge-right .label{
+        padding: 0 var(--edge);
+        text-align: left;
+      }
+
+      .swatch{
+        width: 84px;
+        height: 84px;
+        font-size: 13px;
+      }
+
+      .typo-sample{
+        font-size: 24px;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 420px){
+      .btn{ padding: 12px 22px; }
+      .section{ padding: 36px 0; }
+      .hero__logo{ width: min(320px, 78vw); }
+    }
