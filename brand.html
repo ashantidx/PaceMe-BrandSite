@@ -8,52 +8,58 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./css/brand.css">
+  <link rel="stylesheet" href="brand.css">
 </head>
 
 <body>
 
   <!-- HERO -->
   <section class="title">
-    <div class=""><img src="./images/brand/PaceMe_bw.svg" alt=""></div>
+    <div class="parallax"><img src="PaceMe_bw.svg" alt=""></div>
     <p class="eyebrow">Brand Guidelines</p>
     <p class="">Overview of all the elements used in the branding.</p>
   </section>
 
   <!-- COLOR PALETTE -->
-  <section class="section section-color">
+  <section class="section section-color reveal">
     <h2>Color Palette</h2>
     <p class="subtitle">All the colors used in the application. Including font colors and an accent color used in charts.</p>
 
     <div class="color-row">
       <div class="color-item">
-        <div class="color-circle dark"></div>
-        <span>#16161D</span>
+        <div class="color-circle dark">
+          <span class="color-hex light-text">#16161D</span>
+        </div>
         <p>Dark</p>
       </div>
       <div class="color-item">
-        <div class="color-circle light"></div>
-        <span>#FCF5F0</span>
+        <div class="color-circle light">
+          <span class="color-hex dark-text">#FCF5F0</span>
+        </div>
         <p>Light</p>
       </div>
       <div class="color-item">
-        <div class="color-circle peach"></div>
-        <span>#FEC57F</span>
+        <div class="color-circle peach">
+          <span class="color-hex dark-text">#FEC57F</span>
+        </div>
         <p>Peach</p>
       </div>
       <div class="color-item">
-        <div class="color-circle orange"></div>
-        <span>#F58C5B</span>
+        <div class="color-circle orange">
+          <span class="color-hex light-text">#F58C5B</span>
+        </div>
         <p>Orange</p>
       </div>
       <div class="color-item">
-        <div class="color-circle coral"></div>
-        <span>#F57357</span>
+        <div class="color-circle coral">
+          <span class="color-hex light-text">#F57357</span>
+        </div>
         <p>Coral</p>
       </div>
       <div class="color-item">
-        <div class="color-circle mint"></div>
-        <span>#4FC18C</span>
+        <div class="color-circle mint">
+          <span class="color-hex dark-text">#4FC18C</span>
+        </div>
         <p>Mint</p>
       </div>
     </div>
@@ -61,39 +67,46 @@
 
 
   <!-- LOGO VARIATIONS -->
-  <section class="section">
+  <section class="section reveal">
     <h2 class="white">Logo Variations</h2>
     <p class="subtitle white">The logo is based on the “helping hand” as the two shapes form an a connection balancing out each other.</p>
 
     <div class="logo-grid">
       <div class="logo-card">
-        <div class="logo-img"><img src="./images/brand/PaceMe_logo.svg" alt=""></div>
+        <div class="logo-img"><img src="PaceMe_logo.svg" alt=""></div>
         <p class="white">The main logo</p>
       </div>
 
       <div class="logo-card">
-        <div class="logo-img"><img src="./images/brand/PaceMe_icon.png" alt=""></div>
+        <div class="logo-img"><img src="PaceMe_icon.png" alt=""></div>
         <p class="white">Logo used as an icon</p>
       </div>
 
       <div class="logo-card">
-        <div class="logo-img"><img src="./images/brand/PaceMe_bw.svg" alt=""></div>
+        <div class="logo-img"><img src="PaceMe_bw.svg" alt=""></div>
         <p class="white">White version to increase visibility</p>
       </div>
     </div>
   </section>
 
     <!-- GRADIENT -->
-  <section class="section section-color">
+  <section class="section section-color reveal">
     <h2>Brand Gradient</h2>
     <p class="subtitle">The gradient can be found at many places in the app, like in the logo. It also serves as a guide to the main colors used.</p>
+    <div class="gradient-wrapper">
+      <div class="gradient-bar"></div>
 
-    <div class="gradient-bar"></div>
+      <div class="gradient-labels">
+        <span>#FEC57F</span>
+        <span>#F58C5B</span>
+        <span>#F57357</span>
+      </div>
+    </div>
   </section>
 
   
   <!-- TYPOGRAPHY -->
-  <section class="section typography-section">
+  <section class="section typography-section reveal">
     <h2 class="section-title">Typography</h2>
     <p class="section-subtitle">The font and the different styles used for it throughout the app.</p>
 
@@ -136,6 +149,12 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    © 2026 PaceMe. All rights reserved.
+  </footer>
+
+  <script src="brand.js"></script>
 
 </body>
 </html>
